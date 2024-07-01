@@ -41,6 +41,6 @@ class Mcc implements IValidate
      */
     public static function validate($value)
     {
-        return (bool) preg_match('/^\d{4}$/', $value);
+        return (bool) preg_match('/^\d{4}$/', (string) $value);
     }
 }

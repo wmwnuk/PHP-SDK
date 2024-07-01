@@ -41,6 +41,6 @@ class Amount implements IValidate
      */
     public static function validate($value)
     {
-        return (bool) preg_match('/^\-?\d{1,20}(\.\d{1,6})?$/', $value);
+        return (bool) preg_match('/^\-?\d{1,20}(\.\d{1,6})?$/', (string)$value);
     }
 }

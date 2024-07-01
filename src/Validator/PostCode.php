@@ -42,7 +42,7 @@ class PostCode implements IValidate
 
  public static function validate($value) {
     $value1 = trim($value);
-    return (bool)preg_match('/^[\d\w\s\-]{0,20}$/', $value1) || empty($value1);
+    return (bool)preg_match('/^[\d\w\s\-]{0,20}$/', (string) $value1) || empty($value1);
 }
 
 }

@@ -41,6 +41,6 @@ class BlikCode implements IValidate
      */
     public static function validate($value)
     {
-        return (bool) preg_match("/^\d{6}$/", $value);
+        return (bool) preg_match("/^\d{6}$/", (string) $value);
     }
 }

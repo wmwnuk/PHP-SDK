@@ -41,6 +41,6 @@ class Pin implements IValidate
      */
     public static function validate($value)
     {
-        return (bool) preg_match('/^[A-Za-z0-9]{16,32}$/', $value);
+        return (bool) preg_match('/^[A-Za-z0-9]{16,32}$/', (string) $value);
     }
 }
